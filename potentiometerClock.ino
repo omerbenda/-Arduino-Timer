@@ -144,6 +144,14 @@ void nine()
   digitalWrite(G, LOW);
 }
 
+void digit1()
+{
+  digitalWrite(D1, HIGH);
+  digitalWrite(D4, LOW);
+  digitalWrite(D3, LOW);
+  digitalWrite(D2, LOW);
+}
+
 void digit2()
 {
   digitalWrite(D2, HIGH);
@@ -284,7 +292,7 @@ void loop() {
   }else
   {
     ms = 0;
-    val = map(analogRead(potPin), 0, 1023, 0, 6999);
+    val = map(analogRead(potPin), 0, 1023, 0, 5959);
     thousands = val / 1000;
     hundreds = (val / 100) % 10;
     tens = val / 10 % 10;
